@@ -7,8 +7,11 @@ from dash.dependencies import Input, Output
 from plotly.subplots import make_subplots
 import requests
 
-link = 'https://78703be3.ngrok.io/analytics'
+link = 'ADD HERE API LINK OF DATABASE THAT RETURNS JSON VALUES'
 
+
+# Here I have taken sample from my project that returned values like city names, site name, person name, age , gender etc.
+#So here, visualizations are for the data as mentioned above
 
 external_stylesheets=['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app= dash.Dash(__name__, external_stylesheets=external_stylesheets)
@@ -21,36 +24,9 @@ colors = {
     'text': '#7FDBFF'
 }
 
-
-markdown_text_01='''
-## Cyber Bullying
-Cyberbullying or cyberharassment is a form of bullying or harassment using electronic means. Cyberbullying and cyberharassment are also known as online bullying. It has become increasingly common, especially among teenagers. Cyberbullying is when someone ,bully or harass others on the internet, particularly on social media sites. Harmful bullying behavior can include posting rumors, threats, sexual remarks, a victim's personal information, or pejorative labels (i.e. hate speech).Bullying or harassment can be identified by repeated behavior and an intent to harm.Victims may experience lower self-esteem, increased suicidal ideation, and a variety of negative emotional responses, including being scared, frustrated, angry, and depressed.
-'''
-
-markdown_text_02='''
-## Cyber bullying laws in India
-There is no specific legislation that provides for the specific cyberbullying laws in India however provisions such as Section 67 of the Information Technology Act deals with cyberbullying in a way. Section 67 of the act prescribes punishment for publishing or transmitting obscene material in electronic form for a term which may extend to five years and also with fine which may extend to ten lakh rupees.
-Other than Section 67 of the IT Act following are the provisions of the cyberbullying laws in India:
-
-Section 507  IPC -  The section states that if anyone receives criminal intimidation by way of an anonymous communication then the person giving threats shall be punished with imprisonment for up to two years. By virtue of word anonymous the offense of anti-bullying and cyberbullying is included in this section.
-
-Section 66 E of IT Act - The section prescribes punishment for violation of privacy. The section states that any person who intentionally violates the privacy by transmitting, capturing or publishing private pictures of others shall be punished with up to three years imprisonment or fine up to three lakhs.
-'''
-
-
-
 app.layout=html.Div(
 					[
-
-# 					dcc.Markdown(children=markdown_text_01,style={
-# 						'textAlign':'center',
-# 						'color':colors['background']
-# 						}),
-
-# 					dcc.Markdown(children=markdown_text_02,style={
-# 						'textAlign':'center',
-# 						'color':colors['background']
-# 						}),
+						
 					html.H1(children="!!!Visualisations!!!",
         style={
             'textAlign': 'center',
